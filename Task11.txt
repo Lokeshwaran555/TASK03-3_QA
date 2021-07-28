@@ -1,0 +1,23 @@
+it('Reserve', function(){
+
+    cy.visit('https://dev.devmobo.com/login')
+    cy.get('#email').type('lokzz05000@gmail.com')
+    cy.get('#password').type('Lokesh@52510')
+    cy.get('#loginButton').click()
+    cy.get(':nth-child(13) > .nav-link').click()
+    cy.get('.btn-primary').click()
+    cy.get('#amenityName').type('Hotel')
+    cy.get('#Su').click()
+    cy.get('#M').click()
+    cy.get('#T').click()
+    cy.get('#W').click()
+    cy.get('#Th').click()
+    cy.get('#F').click()
+    cy.get('#S').click()
+    cy.get('#maxNumberOfGuestsPerReservation').click().clear().type('40');
+    cy.get(':nth-child(3) > :nth-child(3) > #openHours').select('09', 'options')
+    cy.get(':nth-child(4) > #openHours').select('10', 'options')
+    cy.get(':nth-child(6) > div > #openHours').select('2', 'options')
+    cy.get('.modal-footer > .btn-primary').click()
+
+})    
